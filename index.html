@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Open Canvas - Map demo</title>
+
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css"/>
+    <link rel="stylesheet" href="css/carousel.css"/>
+    <link rel="stylesheet" href="css/jquery.jscrollpane.css"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false&libraries=places,geometry"></script>
+
+</head>
+<body>
+<div id="map_canvas">map div</div>
+
+<div id="hub" class="">
+<section id="route_selection" style="position:absolute;left:0px;top:0px;z-index:999;">
+</section>
+
+<div id="places_holder">
+    <div class="controls">
+        <select id="route_list" name="selectbasic" class="input-medium">
+        </select>
+    </div>
+    <div id="places_list_holder"><ul></ul></div>
+</div>
+<section id="main">
+    <button  id="close-main"  class="close" style="z-index:99999;padding:4px;">×</button>
+    <div id="stories_holder" style="float:left;">
+        <ul id="stories_list_holder">
+        </ul>
+    </div>
+    <div id="media_holder" style="margin-left:60px;">
+    </div>
+</section>
+</div>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="vendor/underscore.js"></script>
+<script src="vendor/backbone-min.js"></script>
+<script src="vendor/jquery.easing.1.3.js"></script>
+<script src="vendor/jquery.mousewheel.js"></script>
+<script src="vendor/jquery.contentcarousel.js"></script>
+
+<script src="models/routes.js"></script>
+<script src="models/places.js"></script>
+<script src="models/stories.js"></script>
+
+<script src="collections/routes.js"></script>
+<script src="collections/places.js"></script>
+<script src="collections/stories.js"></script>
+
+<script src="views/route_list_view.js"></script>
+<script src="views/route_list_item_view.js"></script>
+<script src="views/place_list_view.js"></script>
+<script src="views/place_marker_view.js"></script>
+<script src="views/place_list_item_view.js"></script>
+<script src="views/story_list_view.js"></script>
+<script src="views/story_list_item_view.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
